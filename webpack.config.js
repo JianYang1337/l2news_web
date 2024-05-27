@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebPackPlugin =  require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const mode = process.env.MODE;
 
@@ -14,8 +15,15 @@ module.exports = {
 		filename: 'js/compressed.js'
 	},
 	plugins: [
-		new HtmlWebPackPlugin({template: './src/index.html'}),
-		new MiniCssExtractPlugin({filename: './css/style.css'})
+		new HtmlWebPackPlugin({
+			template: './src/index.html'
+		}),
+		new MiniCssExtractPlugin({
+			filename: './css/style.css'
+		}),
+		// new CopyWebpackPlugin({
+		// 	patterns: [{ from: 'src/css/cursors', to: 'css/cursors' }]
+		// })
 	],
 	module: {
 		rules: [
@@ -37,6 +45,7 @@ module.exports = {
 		static: {
 			directory: path.join(__dirname, 'dist'),
 		},
+		historyApiFallback: true,
 		compress: true,
 		port: 9000,
 	},

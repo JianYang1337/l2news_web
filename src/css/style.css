@@ -4,3 +4,217 @@
     margin: 0;
     padding: 0;
 }
+
+/* common */
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.common-input {
+    border: 1px solid  #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    padding: 3px 6px;
+    width: 100%;
+}
+
+.common-input:focus {
+    border: 1px solid #000;
+}
+
+.common-btn {
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    padding: 3px 6px;
+    transition: all .5s;
+}
+
+.common-btn:hover {
+    background-color: #fff;
+    color: #000;
+    transition: all .5s;
+}
+
+.common-btn--sub {
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #646464;
+    cursor: pointer;
+    padding: 3px 6px;
+    transition: all .5s;
+}
+
+.common-btn--sub:hover {
+    color: #000;
+    transition: all .5s;
+}
+
+/* header */
+
+.header {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.header-content {
+    align-items: end;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.header-nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-item {
+    border-bottom: 1px solid #fff;
+    color: #646464;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: all .5s;
+}
+
+.nav-item:hover {
+    border-bottom: 1px solid #000;
+    color: #000;
+    transition: all .5s;
+}
+
+.nav-item--active {
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+
+/* login */
+
+.login-body {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none;
+    padding: 10px 5px 5px 5px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    width: 200px;
+}
+
+.login-title {
+    cursor: pointer;
+}
+
+.user-login {
+    border-bottom: 1px solid #fff;
+    position: relative;
+}
+
+.user-login:before {
+    bottom: -10px;
+    content: '';
+    cursor: pointer;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+.user-login:hover .login-body {
+    display: block;
+}
+
+.login-inputs input {
+    margin-bottom: 5px;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-buttons button {
+    margin-bottom: 5px;
+}
+
+/* modals */
+.modal-background {
+    backdrop-filter: blur(5px);
+    background-color: #dddddd40;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.registration-modal {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 0 0 8px 0 #223c5033;
+    margin: auto;
+    max-width: 250px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-title {
+    border-bottom: 1px solid #ddd;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.registration-input {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-title {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 10px;
+    left: 5px;
+    padding: 1px 5px;
+    position: absolute;
+    top: -8px;
+}
+
+.registration-input input {
+    padding: 9px 10px 5px 10px;
+}
+
+.input-title:has( + input:focus) {
+    border: 1px solid #000;
+}

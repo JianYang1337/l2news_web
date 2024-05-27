@@ -1,10 +1,19 @@
 import '../css/style.css';
-import '../css/test.css';
+import { createRegistrationModal } from '../templates/components/modals/registration_modal';
 
-console.log('test');
+const url = 'http://localhost:9000/';
 
-const qwe = (qwe: number) => {
-	console.log(qwe);
-};
+if (window.location.href === url) {
+	console.log('home')
+} else {
+	console.log('another page')
+}
 
-qwe(123);
+const regBtn = document.querySelector('#registration-btn');
+
+regBtn.addEventListener('click', () => {
+	createRegistrationModal();
+})
+
+
+
